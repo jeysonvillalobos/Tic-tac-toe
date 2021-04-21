@@ -23,12 +23,8 @@ describe("Test <App />",()=>{
     });
 
     test("Winner",()=>{
-        const gameState = [
-            "X", "X", "X", 
-            "O", "O", "", 
-            "",  "",  ""
-        ];
-        expect(Winner([])).toBe("X");
+        const gameState = ["X", "X", "X", "O", "O", "", "", "", ""];
+        expect(Winner(gameState)).toBe("X");
     });
 
 });
