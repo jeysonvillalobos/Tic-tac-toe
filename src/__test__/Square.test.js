@@ -14,7 +14,7 @@ describe("Test <Square />",()=>{
     });
 
     test("Player action",()=>{
-        let xCircle = "";
+        let xCircle = "X";
         const wrapper = shallow(<Square type={xCircle} />);
         expect(wrapper.find('.xCircle').text()).toBe("X");
     });
