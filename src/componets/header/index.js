@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import './style.responsive.css';
 
 function Header({ restart, showPopup }){
     return(
@@ -12,11 +13,11 @@ function Header({ restart, showPopup }){
                 <ul className="nav_ul">
                     <li onClick={()=> restart()}>
                         <img src="/images/update-arrow.png" alt=""/>
-                        <span>Restart</span>
+                        <span className="item">Restart</span>
                     </li>
                     <li onClick={()=> showPopup()}>
                         <img src="/images/info.png" alt=""/>
-                        <span>About</span>
+                        <span className="item">About</span>
                     </li>
                 </ul>
             </header>

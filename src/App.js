@@ -1,5 +1,6 @@
 import React,{ useState,useEffect } from 'react';
 import './App.css';
+import './App.responsive.css';
 
 import Header from './componets/header';
 import Square from './componets/square';
@@ -53,7 +54,7 @@ function App(){
                 <div className="sub_container">
                     <Register winners={register} />
                     <div className="game">
-                    <div className="row">
+                        <div className="row">
                             <Square type={gameState[0]} onClick={() => handleClick(0)} />
                             <Square type={gameState[1]} onClick={() => handleClick(1)} />
                             <Square type={gameState[2]} onClick={() => handleClick(2)} />
