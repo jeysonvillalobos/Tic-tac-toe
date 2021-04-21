@@ -4,11 +4,13 @@ import './App.css';
 import Header from './componets/header';
 import Square from './componets/square';
 import Register from './componets/register';
+import Winner from './utils/winner';
 
 const state = ['','','','','','','','',''];
 
 function App(){
     const [turn,setTurn] = useState(true);
+    const [register,setRegister] = useState([]);
     const [gameState,setGameState] = useState(state);
 
     const handleClick = (index) => {
@@ -17,6 +19,25 @@ function App(){
         strings[index] = turn ? "X" : "O";
         setGameState(strings);
         setTurn(!turn);
+    }
+
+    useEffect(() => {
+        let winner = Winner(gameState);
+        if (winner) {
+            restartGame();
+            setRegister([...register, winner]);
+        }
+
+        if(!gameState.includes("")){
+            restartGame();
+            setRegister([...register, 'Tie']);
+        }
+        
+    }, [gameState]);
+
+
+    const restartGame = () => {
+        setGameState(state)
     }
 
     return (
@@ -28,7 +49,7 @@ function App(){
                     <h2 className="type">{ turn ? 'X' : 'O' }</h2>
                 </div> 
                 <div className="sub_container">
-                    <Register />
+                    <Register winners={register} />
                     <div className="game">
                     <div className="row">
                             <Square type={gameState[0]} onClick={() => handleClick(0)} />
