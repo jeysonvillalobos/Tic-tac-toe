@@ -1,0 +1,14 @@
+.Square{
+    display: flex;
+    height: 100%;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #d5d5d5;
+    cursor: pointer;
+}
+
+.Square span{
+    font-size: 50px;
+    font-weight: bold;
+}

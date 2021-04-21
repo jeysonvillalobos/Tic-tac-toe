@@ -8,7 +8,7 @@ describe("Test <Square />",()=>{
     const square = shallow(<Square />);
     test("Render Square",()=>{
         expect(square.length).toEqual(1);
-        expect(square.find('.Square').exists).toBe(true);
+        expect(square.find('.Square').exists()).toBe(true);
     });
 
 });

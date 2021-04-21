@@ -3,7 +3,7 @@ import './style.css';
 
 function Square(){
     return(
-        <div></div>
+        <div className="Square"><span>X</span></div>
     );
 }
 
