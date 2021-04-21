@@ -24,8 +24,8 @@ function App(){
             <Header />
             <div className="container">
                 <div className="turn">
-                    <h2>Player 1</h2>
-                    <h2 className="type">X</h2>
+                    <h2>{ turn ? 'Player 1' : 'Player 2' }</h2>
+                    <h2 className="type">{ turn ? 'X' : 'O' }</h2>
                 </div> 
                 <div className="sub_container">
                     <Register />
