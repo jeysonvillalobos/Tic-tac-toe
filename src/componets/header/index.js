@@ -23,4 +23,5 @@ function Header({ restart, showPopup }){
         </div>
     );
 }
+
 export default Header;

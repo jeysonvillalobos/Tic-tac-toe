@@ -5,6 +5,7 @@ import Header from './componets/header';
 import Square from './componets/square';
 import Register from './componets/register';
 import Winner from './utils/winner';
+import Popup from './componets/popup';
 
 const state = ['','','','','','','','',''];
 
@@ -12,6 +13,7 @@ function App(){
     const [turn,setTurn] = useState(true);
     const [register,setRegister] = useState([]);
     const [gameState,setGameState] = useState(state);
+    const [popup,setPopup] = useState(false);
 
     const handleClick = (index) => {
         let strings = Array.from(gameState);
@@ -42,7 +44,7 @@ function App(){
 
     return (
         <div className="App">
-            <Header />
+            <Header restart={()=> restartGame()} showPopup={() => setPopup(true)} />
             <div className="container">
                 <div className="turn">
                     <h2>{ turn ? 'Player 1' : 'Player 2' }</h2>
@@ -69,6 +71,7 @@ function App(){
                     </div>
                 </div>
             </div>
+            <Popup visibility={popup} onClick={(data) => setPopup(data)} />
         </div>
     );
 
