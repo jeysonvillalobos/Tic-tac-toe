@@ -25,7 +25,7 @@ function App(){
             <div className="container">
                 <div className="turn">
                     <h2>Player 1</h2>
-                    <h2>X</h2>
+                    <h2 className="type">X</h2>
                 </div> 
                 <div className="sub_container">
                     <Register />
