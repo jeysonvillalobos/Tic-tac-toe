@@ -16,7 +16,6 @@ describe("Test <App />",()=>{
         expect(app.find('.game').exists()).toBe(true);
     });
 
-    
 });
 
 
