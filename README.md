@@ -1,5 +1,7 @@
 # Tic-tac-toe game
 
+You can see the project at https://jeysonvillalobos.github.io/Tic-tac-toe/
+
 ## Available Scripts
 
 In the project directory, you can run:
