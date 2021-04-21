@@ -2,7 +2,7 @@ import React from "react";
 import { shallow } from 'enzyme';
 import App from '../App';
 import Register from "../componets/register";
-import Square from "../componets/square";
+import Winner from '../utils/winner';
 
 describe("Test <App />",()=>{
 
@@ -20,6 +20,15 @@ describe("Test <App />",()=>{
 
     test("Player turn", ()=>{
         expect(app.find(".type").text()).toBe("X");
+    });
+
+    test("Winner",()=>{
+        const gameState = [
+            "X", "X", "X", 
+            "O", "O", "", 
+            "",  "",  ""
+        ];
+        expect(Winner([])).toBe("X");
     });
 
 });
