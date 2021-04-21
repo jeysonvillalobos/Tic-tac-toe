@@ -15,5 +15,4 @@ describe('Test <Register />',()=>{
         expect(register.find('.register_data').exists()).toBe(true);
     })
 
-
 });

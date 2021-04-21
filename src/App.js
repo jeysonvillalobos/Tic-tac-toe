@@ -3,6 +3,7 @@ import './App.css';
 
 import Header from './componets/header';
 import Square from './componets/square';
+import Register from './componets/register';
 
 
 function App(){
@@ -16,7 +17,7 @@ function App(){
                     <h2>X</h2>
                 </div> 
                 <div className="sub_container">
-                    <div className="register"></div>
+                    <Register />
                     <div className="game">
                     <div className="row">
                             <Square />
