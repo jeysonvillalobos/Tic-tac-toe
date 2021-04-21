@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.css';
 
-function Square(){
+function Square({ type, onClick }){
     return(
-        <div className="Square"><span>X</span></div>
+        <div onClick={()=> onClick()} className="Square"><span className="xCircle">{type}</span></div>
     );
 }
 

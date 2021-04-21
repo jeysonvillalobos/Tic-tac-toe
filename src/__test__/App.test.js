@@ -1,6 +1,7 @@
 import React from "react";
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import App from '../App';
+import Register from "../componets/register";
 
 describe("Test <App />",()=>{
 
@@ -12,7 +13,7 @@ describe("Test <App />",()=>{
 
     test("Render App UI",()=>{
         expect(app.find('.App').exists()).toBe(true);
-        expect(app.find('.register').exists()).toBe(true);
+        expect(app.containsMatchingElement(<Register />)).toEqual(true);
         expect(app.find('.game').exists()).toBe(true);
     });
 
